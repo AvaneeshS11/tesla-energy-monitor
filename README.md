@@ -12,7 +12,7 @@ Streamlit dashboard + PostgreSQL backend that simulates and visualizes performan
   - Map of sites with hover details & health colors
   - KPI Alerts table (rows outlined if below thresholds)
     
-- Ops skills: SQL, Python, Postgres, Streamlit; optional schedulers (Airflow or GitHub Actions).
+- Ops skills: SQL, Python, Postgres, Streamlit; schedulers - Airflow 
 
 ## Architecture (high level) 
 
