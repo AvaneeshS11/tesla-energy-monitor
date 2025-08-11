@@ -1,6 +1,6 @@
 # Tesla Energy Monitor (Simulated Uptime Dashboard)
 
-## 📌 Goal
+## 📌 Overview
 Streamlit dashboard + PostgreSQL backend that simulates and visualizes performance for a fleet of Tesla Energy sites. It includes an hourly IoT data simulator (idempotent backfill), SQL views for analytics, KPI/alerting logic, and an interactive map with health coloring (green = healthy, orange = attention).
 
 ## What this shows
