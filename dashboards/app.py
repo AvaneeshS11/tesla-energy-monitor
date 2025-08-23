@@ -98,13 +98,13 @@ ORDER BY site_id;
 
 # New query for Map visualization using site_metrics_flat
 map_query = f"""
-SELECT 
+SELECT
     site_id,
     site_name,
     latitude,
     longitude,
     ROUND(100.0 * SUM(CASE WHEN uptime_status THEN 1 ELSE 0 END) / COUNT(*), 2) AS uptime_percent,
-    ROUND(SUM(voltage)::numeric, 2) AS voltage
+    ROUND(AVG(voltage)::numeric, 2) AS avg_voltage
 FROM site_metrics_flat
 WHERE site_id IN {selected_sites_tuple}
 AND timestamp BETWEEN '{start_date_str}' AND '{end_date_str}'
@@ -192,7 +192,7 @@ map_fig = px.scatter_mapbox(
     hover_name="site_name",
     hover_data={
         "uptime_percent": True,
-        "voltage": True,
+        "avg_voltage": True,
         "latitude": False,
         "longitude": False,
         "color": False
